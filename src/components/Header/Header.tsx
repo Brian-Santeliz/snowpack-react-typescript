@@ -1,10 +1,10 @@
 import React from "react";
 import "./header.css";
 import style from "./Header.module.css";
-// interface IProp {
-//   title?: string;
-// }
-const Header = ({ title = "Brian" }) => {
+interface IProp {
+  title?: string;
+}
+const Header = ({ title = "Brian" }: IProp) => {
   return (
     <header className={style.example}>
       <div className="header-container">
