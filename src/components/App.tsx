@@ -1,9 +1,9 @@
 import React from "react";
-import { Header } from "./";
+import { Header } from "./main";
 const App = () => {
   return (
     <>
-      <Header />
+      <Header title="Snowpack React" />
       Welcome to React & Snowpack!
     </>
   );
