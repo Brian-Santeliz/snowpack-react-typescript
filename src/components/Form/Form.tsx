@@ -4,9 +4,10 @@ interface IFormProp {
 }
 const Form = ({ handleSubmit }: IFormProp) => {
   const [form, setForm] = useState<string>("");
-  const _handleSubmit = (e) => {
+  const _handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleSubmit(form);
+    setForm("");
   };
   return (
     <form onSubmit={_handleSubmit}>
@@ -14,7 +15,10 @@ const Form = ({ handleSubmit }: IFormProp) => {
       <input
         type="text"
         placeholder="write you experience using snowpack"
-        onChange={(e) => setForm(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setForm(e.target.value)
+        }
+        value={form}
       />
       <button type="submit">Submit</button>
     </form>

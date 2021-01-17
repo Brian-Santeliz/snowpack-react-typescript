@@ -15,7 +15,17 @@ module.exports = {
     // "bundle": true,
   },
   packageOptions: {
-    /* ... */
+    /* ... 
+    
+    todo
+    agregar prettier,
+    dontenv
+    typescript
+    ver repo original
+    terminal el form y el listado
+    instalart types y typescript
+    
+    */
   },
   devOptions: {
     /* ... */
