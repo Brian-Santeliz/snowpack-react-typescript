@@ -5,7 +5,7 @@ module.exports = {
     public: "/",
     src: "/dist",
   },
-  plugins: ["@snowpack/plugin-react-refresh"],
+  plugins: ["@snowpack/plugin-react-refresh", "@snowpack/plugin-dotenv"],
   routes: [
     /* Enable an SPA Fallback in development: */
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
@@ -19,12 +19,8 @@ module.exports = {
     
     todo
     agregar prettier,
-    dontenv
     typescript
-    ver repo original
-    terminal el form y el listado
-    instalart types y typescript
-    
+    instalart types y typescript    
     */
   },
   devOptions: {

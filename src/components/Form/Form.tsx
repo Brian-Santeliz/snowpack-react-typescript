@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 interface IFormProp {
-  handleSubmit?: Function;
+  handleSubmit: Function;
 }
 const Form = ({ handleSubmit }: IFormProp) => {
   const [form, setForm] = useState<string>("");
