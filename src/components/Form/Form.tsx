@@ -1,13 +1,21 @@
-import { useState, FC } from "react";
-type FormProp = {
-  handleSubmit: Function;
-};
-const Form: FC<FormProp> = () => {
+import React, { useState } from "react";
+interface IFormProp {
+  handleSubmit?: Function;
+}
+const Form = ({ handleSubmit }: IFormProp) => {
   const [form, setForm] = useState<string>("");
+  const _handleSubmit = (e) => {
+    e.preventDefault();
+    handleSubmit(form);
+  };
   return (
-    <form>
+    <form onSubmit={_handleSubmit}>
       <h1>Form Snowpack</h1>
-      <input type="text" placeholder="write you experience using snowpack" />
+      <input
+        type="text"
+        placeholder="write you experience using snowpack"
+        onChange={(e) => setForm(e.target.value)}
+      />
       <button type="submit">Submit</button>
     </form>
   );

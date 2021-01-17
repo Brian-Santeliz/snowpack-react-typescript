@@ -4,7 +4,7 @@ import style from "./Header.module.css";
 interface IProp {
   title?: string;
 }
-const Header = ({ title = "Brian" }: IProp) => {
+const Header = ({ title }: IProp) => {
   return (
     <header className={style.example}>
       <div className="header-container">
@@ -13,5 +13,7 @@ const Header = ({ title = "Brian" }: IProp) => {
     </header>
   );
 };
-
+Header.defaultProps = {
+  title: "Welcome to Snowpack & React + Typescript <3",
+};
 export default Header;
