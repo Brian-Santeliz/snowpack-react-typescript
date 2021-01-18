@@ -5,3 +5,7 @@ import "../public/index.css";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
+
+if (import.meta.hot) {
+  import.meta.hot.accept();
+}
