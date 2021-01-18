@@ -12,8 +12,10 @@
     "typed-css-modules": "^0.6.5"
   },
   "dependencies": {
+    "@snowpack/plugin-typescript": "^1.2.1",
+    "@types/react-dom": "^17.0.0",
+    "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }
- 
 }
